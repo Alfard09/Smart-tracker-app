@@ -2,6 +2,7 @@ import { type Task } from "./types/task"
 import { useLocalStorage } from "./hooks/useLocalStorage"
 import TaskInput from "./components/TaskInput"
 import TaskList from "./components/TaskList"
+import "./App.css"
 
 function App() {
 
@@ -9,13 +10,19 @@ function App() {
 
   return (
 
-    <div>
+    <div className="app-bg">
 
-      <h1>Smart Task Tracker</h1>
+      <div className="container">
 
-      <TaskInput tasks={tasks} setTasks={setTasks} />
+        <h1 className="title">
+          Smart Task Tracker
+        </h1>
 
-      <TaskList tasks={tasks} setTasks={setTasks} />
+        <TaskInput tasks={tasks} setTasks={setTasks} />
+
+        <TaskList tasks={tasks} setTasks={setTasks} />
+
+      </div>
 
     </div>
 

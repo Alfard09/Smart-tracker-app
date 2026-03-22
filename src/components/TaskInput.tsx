@@ -27,13 +27,18 @@ export default function TaskInput({ tasks, setTasks }: Props) {
     }
 
     return (
-        <div>
+        <div className="input-group">
             <input
+                className="task-input"
                 placeholder="Add a task..."
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
-            <button onClick={addTask}>Add Task</button>
+            <button
+                className="add-btn"
+                onClick={addTask}>
+                Add Task
+            </button>
 
         </div>
     )

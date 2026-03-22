@@ -26,18 +26,20 @@ export default function TaskItem({ task, tasks, setTasks }: Props) {
     }
 
     return (
-        <div>
+        <div className="task-item">
             <span
                 onClick={toggleTask}
-                style={{
-                    textDecoration: task.completed ? "line-through" : "none",
-                    cursor: "pointer"
-                }}
+                className={`task-text ${task.completed ? "completed" : ""}`}
             >
                 {task.title}
             </span>
 
-            <button onClick={deleteTask}>Delete</button>
+            <button
+                className="delete-btn"
+                onClick={deleteTask}
+            >
+                ✕
+            </button>
         </div>
     )
 }
