@@ -26,20 +26,45 @@ export default function TaskItem({ task, tasks, setTasks }: Props) {
     }
 
     return (
+
         <div className="task-item">
-            <span
-                onClick={toggleTask}
-                className={`task-text ${task.completed ? "completed" : ""}`}
-            >
-                {task.title}
-            </span>
+
+            <div className="task-left">
+
+                <input
+
+                    type="checkbox"
+
+                    checked={task.completed}
+
+                    onChange={toggleTask}
+
+                />
+
+                <span
+
+                    className={task.completed ? "completed" : ""}
+
+                >
+
+                    {task.title}
+
+                </span>
+
+            </div>
 
             <button
+
                 className="delete-btn"
+
                 onClick={deleteTask}
+
             >
+
                 ✕
+
             </button>
+
         </div>
     )
 }
