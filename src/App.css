@@ -110,6 +110,20 @@ body {
 
 }
 
+.edit-input {
+
+    padding: 6px;
+
+    border-radius: 6px;
+
+    border: 1px solid rgba(124, 58, 237, 0.4);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: white;
+
+}
+
 .task-input::placeholder {
 
     color: rgba(255, 255, 255, 0.4);
@@ -205,6 +219,68 @@ body {
 
 }
 
+.task-actions {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+/* edit button */
+
+.edit-btn {
+
+    background: rgba(124, 58, 237, 0.15);
+
+    border: 1px solid rgba(124, 58, 237, 0.35);
+
+    color: #c084fc;
+
+    border-radius: 6px;
+
+    padding: 4px 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+.edit-btn:hover {
+
+    background: rgba(124, 58, 237, 0.35);
+
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.5);
+
+}
+
+/* save button */
+
+.save-btn {
+
+    background: rgba(34, 197, 94, 0.15);
+
+    border: 1px solid rgba(34, 197, 94, 0.35);
+
+    color: #4ade80;
+
+    border-radius: 6px;
+
+    padding: 4px 8px;
+
+    cursor: pointer;
+
+}
+
+.save-btn:hover {
+
+    background: rgba(34, 197, 94, 0.35);
+
+    box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
+
+}
+
 /* Filter Bar */
 .filter-bar {
 
@@ -256,5 +332,69 @@ body {
 
     box-shadow:
         0 0 8px rgba(124, 58, 237, 0.5);
+
+}
+
+
+
+/* animation */
+
+.blob {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 140px;
+
+    height: 140px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    background:
+
+        radial-gradient(circle at 30% 30%,
+            rgba(192, 132, 252, 0.9),
+            rgba(124, 58, 237, 0.4),
+            rgba(91, 33, 182, 0.2));
+
+    filter:
+
+        blur(30px);
+
+    opacity: 0.7;
+
+    transform:
+
+        translate(-50%, -50%);
+
+    transition:
+
+        transform 0.15s linear;
+
+}
+
+.blob2 {
+
+    width: 220px;
+    height: 220px;
+
+    opacity: 0.35;
+
+    filter: blur(40px);
+    border-radius: 60% 40% 55% 45%;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(250, 250, 250, 0.844),
+            rgba(190, 189, 190, 0.25),
+            transparent);
 
 }
